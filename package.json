@@ -1,0 +1,19 @@
+{
+  "name": "whatsguard",
+  "version": "0.0.1",
+  "description": "A simple `whatsapp-web` bot that protects WhatsApp groups from ads and spams and gives admins more management; using Petorly.co API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petroly-initiative/WhatsGuard.git"
+  },
+  "author": "Ammar Alfaifi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petroly-initiative/WhatsGuard/issues"
+  },
+  "homepage": "https://github.com/petroly-initiative/WhatsGuard#readme"
+}
