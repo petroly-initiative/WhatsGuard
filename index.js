@@ -2,7 +2,7 @@ const { Client, LocalAuth } = require("whatsapp-web.js");
 const qrcode = require("qrcode-terminal");
 
 // Assuming your GraphQL endpoint URL
-const graphqlEndpoint = "http://localhost:8000/endpoint/";
+const graphqlEndpoint = "https://api.petroly.co/";
 
 const client = new Client({
   authStrategy: new LocalAuth(),
