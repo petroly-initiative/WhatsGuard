@@ -18,7 +18,7 @@ client.on("ready", () => {
 });
 
 client.on("message", async (message) => {
-  if (message.body.length > 10) {
+  if (message.body.length > 70) {
     const contact = await message.getContact();
     const chat = await message.getChat();
     //
@@ -35,6 +35,7 @@ mutation {
   ) {
       isSpam
       messagePk
+      reason
   }
 }
 `;
@@ -53,13 +54,13 @@ mutation {
         // Handle the response data
         console.log("GraphQL Mutation Response:", response);
         if (response.data?.checkMessage.isSpam) {
-          // message.delete(true);
-          // chat.sendMessage(
+          message.delete(true);
+          chat.sendMessage(
+            `ID \`${response.data.checkMessage.messagePk}\`\n${response.data.checkMessage.reason}`,
+          );
+          // message.reply(
           //   `Spam message detected \`${response.data.checkMessage.messagePk}\``,
           // );
-          message.reply(
-            `Spam message detected \`${response.data.checkMessage.messagePk}\``,
-          );
         }
       })
       .catch((error) => {
