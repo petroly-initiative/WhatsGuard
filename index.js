@@ -6,7 +6,7 @@ const graphqlEndpoint = "http://localhost:8000/endpoint/";
 
 const client = new Client({
   authStrategy: new LocalAuth(),
-  puppeteer: { headless: false },
+  puppeteer: { headless: true },
 });
 
 client.on("qr", (qr) => {
