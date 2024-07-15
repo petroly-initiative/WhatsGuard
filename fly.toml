@@ -4,11 +4,16 @@
 #
 
 app = "whatsguard"
-primary_region = "arn"
+primary_region = "cdg"
 
 [build]
 
 [[vm]]
   cpu_kind = "shared"
   cpus = 1
+
+[mounts]
+  source = "whatsguard"
+  destination = "/app/.wwebjs_auth" 
+  process = "app"
   memory_mb = 1024
