@@ -4,16 +4,25 @@ const qrcode = require("qrcode-terminal");
 const graphqlEndpoint = "https://api.petroly.co/";
 
 const client = new Client({
-  authStrategy: new LocalAuth(),
-  puppeteer: { headless: true },
+    authStrategy: new LocalAuth(),
+    restartOnAuthFail: true,
+    puppeteer: {
+        headless: true,
+        args: []
+    }
 });
 
-client.on("qr", (qr) => {
-  qrcode.generate(qr, { small: true });
+client.on('qr', qr => {
+    qrcode.generate(qr, { small: true });
 });
 
-client.on("ready", () => {
-  console.log("Client is ready!");
+client.on('authenticated', () => {
+    console.log('AUTHENTICATED');
+});
+
+client.on('ready', async () => {
+    const version = await client.getWWebVersion();
+    console.log(`WWeb v${version}`);
 });
 
 client.on("message", async (message) => {
