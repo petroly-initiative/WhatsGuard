@@ -2,6 +2,17 @@
 
 WhatsGuard is a sophisticated WhatsApp bot designed to protect groups from spam and advertisements while providing advanced management tools for administrators. It leverages the power of the Petroly.co API for intelligent message filtering and spam detection.
 
+## ⚠️ Disclaimer
+
+**IMPORTANT:** Using automated or unofficial software with WhatsApp may violate their Terms of Service and could potentially lead to your account being banned. WhatsGuard is an unofficial tool not endorsed by WhatsApp. Use this bot at your own risk. The developers of WhatsGuard are not responsible for any consequences resulting from the use of this software, including but not limited to account bans or restrictions.
+
+I strongly recommend:
+- Using this bot with a dedicated WhatsApp account, not your primary personal account.
+- Being aware of WhatsApp's policies regarding automated tools and bots.
+- Monitoring WhatsApp's Terms of Service for any changes that might affect the use of this bot.
+
+By using WhatsGuard, you acknowledge and accept these risks.
+
 ## Features
 
 - Automatic spam and advertisement detection
